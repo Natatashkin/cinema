@@ -64,6 +64,11 @@ body {
   text-decoration: none;
   color: var(--primary-text-color);
 }
+
+.menu__link:hover {
+  color: var(--accent-color);
+}
+
 .user {
   display: flex;
   align-items: center;
