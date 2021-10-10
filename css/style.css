@@ -4,31 +4,54 @@
   --seat--color: rgba(255, 255, 255, 0.2);
   --primary-text-color: rgb(255, 255, 255);
   --secondary-text-color: rgba(255, 255, 255, 0.5);
+  --tertiary-text-color: rgb(98, 20, 2);
   --primary-bg-color: rgb(98, 20, 2);
-  --secondary-bd-color: rgba(36, 36, 36, 0.18);
+  --secondary-bg-color: rgba(36, 36, 36, 0.18);
+  --tertiary-bg-color: rgba(255, 255, 255, 0.5);
+  --quadruple-bg-color: rgba(255, 255, 255, 0.5);
   --primary-font-size: 16px;
+  --primary-line-height: 1.5;
+  --secondary-line-height: 1.17;
+  --transition: background-color 300ms;
+  --cursor: pointer;
 }
 
 body {
   background-color: var(--primary-bg-color);
   font-family: 'Roboto', sans-serif;
   font-size: var(--primary-font-size);
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: var(--primary-line-height);
   color: var(--primary-text-color);
 }
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.header {
-  padding: 30px 0;
+ul {
+  margin: 0;
+  padding: 0;
 }
-.top-nav {
+
+.header {
+  min-height: 100vh;
+  background-image: linear-gradient(
+      180deg,
+      rgba(98, 20, 2, 0.31) 0%,
+      #621402 85.62%
+    ),
+    url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.navbar {
   display: flex;
   align-items: center;
+  padding: 30px 0;
 }
 
 .logo {
@@ -43,13 +66,11 @@ body {
   display: flex;
   align-items: center;
   font-size: 14px;
-  line-height: 1.17;
+  line-height: var(--secondary-line-height);
 }
 
 .menu__list {
   display: flex;
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -63,9 +84,12 @@ body {
   height: 33px;
   text-decoration: none;
   color: var(--primary-text-color);
+  transition: var(--transition);
+  cursor: var(--cursor);
 }
 
-.menu__link:hover {
+.menu__link:hover,
+.menu__link:focus {
   color: var(--accent-color);
 }
 
@@ -83,4 +107,155 @@ body {
   width: 33px;
   height: 33px;
   border-radius: 50%;
+}
+
+.hero {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 59px;
+  /* color: ; */
+}
+
+.film-info__original-title {
+  color: var(--secondary-text-color);
+  font-size: 24px;
+  margin-bottom: 11px;
+}
+
+.film-info__title {
+  font-size: 36px;
+  line-height: var(--secondary-line-height);
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.film-descr {
+  max-width: 570px;
+  margin: 0;
+  margin-bottom: 47px;
+}
+
+.film-trailer {
+  margin: auto;
+}
+
+.film-info__details,
+.film-time,
+.film-rating {
+  display: flex;
+  align-items: center;
+}
+.film-time {
+  margin-right: 34px;
+}
+
+.film-time__icon,
+.rating__icon {
+  display: block;
+}
+
+.film-time__icon {
+  margin-right: 14px;
+}
+
+.rating__icon {
+  margin-right: 22px;
+}
+
+.rating__current {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.session {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  padding-top: 46px;
+  padding-bottom: 64px;
+  border-top: 1px solid var(--tertiary-bg-color);
+  border-bottom: 1px solid var(--tertiary-bg-color);
+}
+
+.session__date {
+  margin-right: 95px;
+}
+
+.session__label {
+  line-height: var(--secondary-line-height);
+  margin-bottom: 20px;
+}
+
+.session__date-list {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+}
+.session__date-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+
+  border: 1px solid var(--tertiary-bg-color);
+  border-radius: 5px;
+  text-transform: uppercase;
+  line-height: var(--secondary-line-height);
+  transition: background-color 300ms;
+  cursor: var(--cursor);
+}
+
+.session__date-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.session__month {
+  font-size: 16px;
+}
+
+.session__day {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.session__day-week {
+  font-size: 19px;
+  text-transform: lowercase;
+}
+
+.session__date-item:hover,
+.session__date-item:focus {
+  background-color: var(--accent-color);
+  color: var(--tertiary-text-color);
+}
+
+.session__cinema {
+  margin-right: 30px;
+}
+.cinemas,
+.time-check {
+  display: block;
+  min-width: 470px;
+  height: 60px;
+  margin-top: 20px;
+  padding-left: 20px;
+  border: 1px solid var(--tertiary-bg-color);
+  border-radius: 5px;
+  background-color: var(--quadruple-bg-color);
+  color: var(--primary-text-color);
+  cursor: var(--cursor);
+}
+
+.option {
+  background-color: var(--quadruple-bg-color);
+  border: 1px solid var(--tertiary-bg-color);
+  border-radius: 5px;
+  color: var(--tertiary-text-color);
+  cursor: var(--cursor);
+}
+
+.time-check {
+  min-width: 108px;
 }

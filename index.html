@@ -13,38 +13,137 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <div class="top-nav">
-                <a class="logo" href="#">
-                    <img class="logo-img" src="./images/icons/logo.svg" alt="Логотип">
-                </a>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Главная</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Фильмы</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Кинотеатры</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">События</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Поддержка</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="user">
-                    <span class="user__greet">Привет, Ната</span>
-                    <div class="user__avatar">
-                        <img class="avatar-img" src="./images/avatar-img.jpg" alt="Аватар пользователя" >
-                    </div>
+        <div class="navbar container">
+            <a class="logo" href="#">
+                <img class="logo-img" src="./images/icons/logo.svg" alt="Логотип">
+            </a>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Фильмы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Кинотеатры</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">События</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Поддержка</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="user">
+                <span class="user__greet">Привет, Ната</span>
+                <div class="user__avatar">
+                    <img class="avatar-img" src="./images/avatar-img.jpg" alt="Аватар пользователя" >
                 </div>
             </div>
         </div>
+        <!-- /.navbar -->
+        <div class="hero container">
+            <div class="hero__film-info">
+                <small class="film-info__original-title">
+                    Avengers: Infinity War
+                </small>
+                <h1 class="film-info__title">
+                    Мстители: война бесконечности
+                </h1>
+                <p class="film-descr">
+                    Пока Мстители и их союзники продолжают защищать мир от различных опасностей, с которыми не смог бы справиться один
+                    супергерой, новая угроза возникает из космоса: Танос. Межгалактический тиран преследует цель собрать все шесть Камней
+                    Бесконечности - артефакты невероятной силы, с помощью которых можно менять реальность по своему желанию. Всё, с чем
+                    Мстители сталкивались ранее, вело к этому моменту – судьба Земли никогда ещё не была столь неопределённой.
+                </p>
+                <div class="film-info__details">
+                    <div class="film-time">
+                        <img class="film-time__icon" src="../images/icons/clock.svg" alt="clock" >
+                        <span class="film-time__counter">240 мин.</span>
+                    </div>
+                    <div class="film-rating">
+                        <img class="rating__icon" src="../images/icons/imdb.svg" alt="" >
+                        <span class="raiting__counter">
+                            <span class="rating__current">
+                                9.2
+                            </span>
+                            / 10
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- /.film-info -->
+            <a class="film-trailer" href="">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="50" fill="white" />
+                    <g clip-path="url(#clip0)">
+                        <path
+                            d="M43.0758 30.0033C39.3071 27.8416 36.2518 29.6125 36.2518 33.9556V66.0059C36.2518 70.3533 39.3071 72.1219 43.0758 69.9623L71.0893 53.8967C74.8592 51.7342 74.8592 48.2306 71.0893 46.0686L43.0758 30.0033Z"
+                            fill="#F20D01" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="41.8013" height="41.8013" fill="white" transform="translate(34.1837 29.0816)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </a>
+            <!-- /.film-trailer -->
+            
+        </div>
+        <!-- /.hero -->
+        <div class="session container">
+            <div class="session__date">
+                <span class="session__label">Дата</span>
+                <ul class="session__date-list">
+                    <li class="session__date-item">
+                        <span class="session__month">апр</span>
+                        <span class="session__day">27</span>
+                        <span class="session__day-week">пт</span>
+                    </li>
+                    <li class="session__date-item">
+                        <span class="session__month">апр</span>
+                        <span class="session__day">28</span>
+                        <span class="session__day-week">сб</span>
+                    </li>
+                    <li class="session__date-item">
+                        <span class="session__month">апр</span>
+                        <span class="session__day">29</span>
+                        <span class="session__day-week">вс</span>
+                    </li>
+                    <li class="session__date-item">
+                        <span class="session__month">апр</span>
+                        <span class="session__day">30</span>
+                        <span class="session__day-week">пн</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.session__date -->
+            <div class="session__cinema">
+                <span class="session__label">Кинотеатр</span>
+                <select class="cinemas" name="cinema">
+                    <option class="option" value="Октябрь">Октябрь, ул. Калужская 28</option>
+                    <option class="option" value="MiX">MiX, ул.Зелёная 48</option>
+                    <option class="option" value="Multiplex">Multiplex, ул. Благовестная 356</option>
+                    <option class="option" value="City">City, ул. Днепровская 4</option>
+                </select>
+            </div>
+            <!-- /.session__cinema -->
+            <div class="session__time">
+                <span class="session__label">Время</span>
+                <select class="time-check" name="time">
+                    <option class="option" value="12:00">12:00</option>
+                    <option class="option" value="15:00">15:00</option>
+                    <option class="option" value="18:00">18:00</option>
+                    <option class="option" value="21:00">21:00</option>
+                </select>
+            </div>
+            <!-- /.session__time -->
+        </div>
+        <!-- /.session -->
     </header>
 </body>
 </html>
