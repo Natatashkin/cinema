@@ -85,6 +85,12 @@ ul {
     padding: 30px 15px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 15px 15px;
+  }
+}
 .logo {
   display: block;
   margin-right: 57px;
@@ -146,6 +152,13 @@ ul {
   margin-bottom: 59px;
 }
 
+@media screen and (max-width: 480px) {
+  .hero {
+    margin-top: 30px;
+    margin-bottom: 29px;
+  }
+}
+
 .film-info__original-title {
   color: var(--secondary-text-color);
   font-size: 24px;
@@ -163,6 +176,12 @@ ul {
   max-width: 570px;
   margin: 0;
   margin-bottom: 47px;
+}
+
+@media screen and (max-width: 480px) {
+  .film-descr {
+    margin-bottom: 27px;
+  }
 }
 
 .film-trailer {
@@ -206,6 +225,12 @@ ul {
   font-weight: 700;
 }
 
+@media screen and (max-width: 480px) {
+  .rating__current {
+    font-size: 18px;
+  }
+}
+
 .session {
   display: flex;
   align-items: flex-start;
@@ -230,6 +255,12 @@ ul {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .session__date-list {
+    flex-wrap: wrap;
+  }
+}
+
 .session__date-item {
   display: flex;
   flex-direction: column;
@@ -248,6 +279,12 @@ ul {
 
 .session__date-item:not(:last-child) {
   margin-right: 15px;
+}
+
+@media screen and (max-width: 480px) {
+  .session__date-item:not(:nth-child(-n + 2)) {
+    margin-top: 15px;
+  }
 }
 
 .session__month {
@@ -332,6 +369,14 @@ ul {
   .session {
     flex-direction: column;
   }
+
+  .session__options {
+    flex-direction: column;
+  }
+
+  .cinemas {
+    margin-bottom: 20px;
+  }
 }
 
 .scheme {
@@ -362,6 +407,7 @@ ul {
 }
 
 .legend {
+  width: auto;
   padding-top: 22px;
   padding-bottom: 35px;
   display: flex;
@@ -397,6 +443,19 @@ ul {
 .active,
 .legend-active {
   fill: var(--accent-color) !important;
+}
+
+@media screen and (max-width: 808px) {
+  .legend-free-text,
+  .legend-booked-text,
+  .legend-active-text {
+    font-size: 12px;
+  }
+
+  .legend-label svg {
+    width: 16px;
+    height: 14px;
+  }
 }
 
 .booked,
